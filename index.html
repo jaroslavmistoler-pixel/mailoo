@@ -425,11 +425,12 @@ footer a:hover { color: var(--ink); }
   function brandDots(root) {
     var re = /(^|[^\w@\/.-])mailoo(?![\w-]|\.[a-z])/g;
     var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, { acceptNode: function (n) {
-      var p = n.parentNode; if (!p || /^(SCRIPT|STYLE|TITLE|TEXTAREA)$/.test(p.nodeName) || p.closest('.mdot, .nodot, svg')) return NodeFilter.FILTER_REJECT;
+      var p = n.parentNode; if (!p || /^(SCRIPT|STYLE|TITLE|TEXTAREA)$/.test(p.nodeName) || p.closest('.mdot, .mtext, .nodot, svg')) return NodeFilter.FILTER_REJECT;
       re.lastIndex = 0; return re.test(n.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP; } });
     var list = []; while (walker.nextNode()) list.push(walker.currentNode);
     list.forEach(function (n) {
-      var frag = document.createDocumentFragment(), text = n.nodeValue, last = 0, m; re.lastIndex = 0;
+      // vše do jednoho obalu – ve flex/grid seznamech tak text zůstane jedním blokem
+      var frag = document.createElement('span'), text = n.nodeValue, last = 0, m; re.lastIndex = 0;
       while ((m = re.exec(text))) {
         var start = m.index + m[1].length;
         frag.appendChild(document.createTextNode(text.slice(last, start) + 'ma'));
@@ -437,6 +438,7 @@ footer a:hover { color: var(--ink); }
         frag.appendChild(document.createTextNode('loo')); last = start + 6;
       }
       frag.appendChild(document.createTextNode(text.slice(last)));
+      frag.className = 'mtext';
       n.parentNode.replaceChild(frag, n);
     });
   }
