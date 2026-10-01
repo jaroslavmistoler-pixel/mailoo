@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Zásady ochrany soukromí – pidgoo</title>
+<meta name="description" content="Jak pidgoo zachází s vašimi údaji – vše zůstává zašifrované jen ve vašem počítači.">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<style>
+@font-face { font-family: 'Outfit'; src: url('Outfit-Variable.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: 'Geist'; src: url('Geist-Variable.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
+:root { --bg: #F4F8F5; --surface: #FFFFFF; --ink: #0F2A21; --ink2: #34504A; --muted: #5A7268; --line: #DCE7E1; --accent: #2C7A5C; --accent-soft: #D9F0E3; --coral: #FF7A59; }
+@media (prefers-color-scheme: dark) { :root { --bg: #0B1310; --surface: #111C17; --ink: #E5F3EB; --ink2: #BFD6CA; --muted: #93AE9F; --line: #1F302A; --accent: #7FD6AE; --accent-soft: #143328; color-scheme: dark; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.65 'Geist', 'Segoe UI', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+header { border-bottom: 1px solid var(--line); }
+header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+.logo img { width: 30px; height: 30px; }
+.logo svg { height: 22px; width: auto; }
+.lang { font-size: 14px; color: var(--muted); text-decoration: none; }
+main { padding: 48px 0 64px; }
+h1 { font: 600 clamp(30px, 5vw, 42px)/1.15 'Outfit', 'Segoe UI', sans-serif; letter-spacing: -.02em; margin: 0 0 8px; }
+.updated { color: var(--muted); font-size: 14px; margin: 0 0 32px; }
+.summary { background: var(--accent-soft); border-radius: 16px; padding: 18px 22px; margin: 0 0 36px; }
+.summary p { margin: 0; }
+h2 { font: 600 21px/1.3 'Outfit', 'Segoe UI', sans-serif; margin: 36px 0 10px; }
+p, li { color: var(--ink2); }
+ul { padding-left: 22px; }
+li { margin: 6px 0; }
+footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
+footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="./" aria-label="pidgoo"><img src="icon.svg" alt="" width="30" height="30"><svg role="img" aria-hidden="true" style="color:var(--ink)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 104"><g transform="translate(2,78)"><g fill="currentColor"><path transform="translate(0.00,0) scale(0.09600,-0.09600)" d="M326 -10Q273.75 -10 231.75 11.25Q189.75 32.5 164.625 69.75Q139.5 107 137.5 154.5V326Q139.5 373.5 165.0 411.375Q190.5 449.25 232.4746376811594 471.125Q274.4492753623188 493 326 493Q393 493 446.0 459.75Q499 426.5 529.5 369.625Q560 312.75 560 240.75Q560 169.5 529.5 112.75Q499 56 446.0 23.0Q393 -10 326 -10ZM57.5 -202.5V483H189V356.11547085201795L166.75 238.5L187.75 121.5V-202.5ZM303.1418269230769 111Q339.34375 111 366.921875 127.625Q394.5 144.25 410.25 173.76712328767124Q426 203.28424657534248 426 241.59246575342465Q426 280 410.25 309.375Q394.5 338.75 366.9830097087379 355.375Q339.4660194174757 372 303.4830097087379 372Q267.5 372 239.6268115942029 355.4546703296703Q211.7536231884058 338.90934065934067 196.3768115942029 309.46153846153845Q181 280.0137362637363 181 241.53296703296704Q181 203.25 196.25 173.75Q211.5 144.25 239.375 127.625Q267.25 111 303.1418269230769 111Z"/><path transform="translate(54.95,0) scale(0.09600,-0.09600)" d="M57.5 0V483H189V0Z"/><path transform="translate(77.16,0) scale(0.09600,-0.09600)" d="M261.5 -10Q194.5 -10 141.53911042944785 22.980263157894736Q88.5782208588957 55.96052631578947 58.03911042944785 112.73026315789474Q27.5 169.5 27.5 240.90853658536585Q27.5 313.0914634146341 58.0 369.79573170731703Q88.5 426.5 141.35576923076923 459.75Q194.21153846153845 493 261.5 493Q313.75 493 355.375 471.75Q397 450.5 422.625 413.25Q448.25 376 450 328.5V157Q448.25 109.5 423.0 71.625Q397.75 33.75 355.75 11.875Q313.75 -10 261.5 -10ZM284 111Q321 111 348.28952205882354 127.62332214765101Q375.5790441176471 144.24664429530202 391.03952205882354 173.623322147651Q406.5 203 406.5 241.5Q406.5 280.29009433962267 391.0923913043478 309.4492924528302Q375.6847826086956 338.60849056603774 348.3423913043478 355.3042452830189Q321 372 284.625 372Q248.25 372 220.8080985915493 355.2381516587678Q193.3661971830986 338.47630331753555 177.4330985915493 309.07582938388623Q161.5 279.67535545023696 161.5 241.5Q161.5 203.25 177.189039408867 173.78Q192.87807881773398 144.31 220.74137931034483 127.655Q248.60467980295567 111 284 111ZM530 0H399.75V129.75L420.75 247.5L398.5 364.25V723H530Z"/><path transform="translate(132.11,0) scale(0.09600,-0.09600)" d="M260.25 -214Q182.5 -214 123.75 -186.5Q65 -159 30 -109L113 -26.25Q140.5 -59.5 175.25 -76.625Q210 -93.75 259 -93.75Q319.75 -93.75 355.125 -62.875Q390.5 -32 390.5 22.5V143.5L412.75 249.5L391.75 356V483H522V24.5Q522 -47.5 488.5 -100.875Q455 -154.25 396.0 -184.125Q337 -214 260.25 -214ZM254.25 12.5Q189 12.5 137.125 44.125Q85.25 75.75 55.625 130.75Q26 185.75 26 253.5Q26 321.5 55.625 375.625Q85.25 429.75 137.125 461.375Q189 493 254.25 493Q307.75 493 349.125 472.125Q390.5 451.25 414.625 414.375Q438.75 377.5 440.5 328.5V177Q438.75 128.75 414.25 91.5Q389.75 54.25 348.375 33.375Q307 12.5 254.25 12.5ZM279.75 132.25Q315.75 132.25 342.5 147.75Q369.25 163.25 383.875 190.375Q398.5 217.5 398.5 253Q398.5 288.5 383.875 315.625Q369.25 342.75 342.625 358.25Q316 373.75 280 373.75Q244.25 373.75 217.125 358.25Q190 342.75 175.0 315.5Q160 288.25 160 253Q160 218.75 175.0 191.125Q190 163.5 217.0 147.875Q244 132.25 279.75 132.25Z"/><path transform="translate(186.19,0) scale(0.09600,-0.09600)" d="M284.5 -10.5Q211.75 -10.5 153.125 23.0Q94.5 56.5 60.25 114.0Q26 171.5 26 242.5Q26 313.5 60.125 370.0Q94.25 426.5 152.875 460.0Q211.5 493.5 284.25 493.5Q357.75 493.5 416.25 460.375Q474.75 427.25 509.0 370.375Q543.25 313.5 543.25 242.5Q543.25 171.5 509.125 114.0Q475 56.5 416.5 23.0Q358 -10.5 284.5 -10.5ZM284.25 112Q321.25 112 349.5 128.5Q377.75 145 393.375 174.625Q409 204.25 409 242.25Q409 280.25 392.875 309.125Q376.75 338 349.0 354.5Q321.25 371 284.25 371Q248.25 371 220.0 354.375Q191.75 337.75 176.0 308.875Q160.25 280 160.25 242Q160.25 204.25 176.0 174.625Q191.75 145 220.0 128.5Q248.25 112 284.25 112Z"/><path transform="translate(239.32,0) scale(0.09600,-0.09600)" d="M284.5 -10.5Q211.75 -10.5 153.125 23.0Q94.5 56.5 60.25 114.0Q26 171.5 26 242.5Q26 313.5 60.125 370.0Q94.25 426.5 152.875 460.0Q211.5 493.5 284.25 493.5Q357.75 493.5 416.25 460.375Q474.75 427.25 509.0 370.375Q543.25 313.5 543.25 242.5Q543.25 171.5 509.125 114.0Q475 56.5 416.5 23.0Q358 -10.5 284.5 -10.5ZM284.25 112Q321.25 112 349.5 128.5Q377.75 145 393.375 174.625Q409 204.25 409 242.25Q409 280.25 392.875 309.125Q376.75 338 349.0 354.5Q321.25 371 284.25 371Q248.25 371 220.0 354.375Q191.75 337.75 176.0 308.875Q160.25 280 160.25 242Q160.25 204.25 176.0 174.625Q191.75 145 220.0 128.5Q248.25 112 284.25 112Z"/></g><circle cx="66.78" cy="-59.50" r="7.83" fill="#FF7A59"/></g></svg></a><a class="lang" href="privacy.html" hreflang="en">English</a></div></header>
+<main><div class="wrap">
+<h1>Zásady ochrany soukromí</h1>
+<p class="updated">Platné od 1. října 2026</p>
+<div class="summary"><p><b>Stručně:</b> pidgoo nemá žádný vlastní server, přes který by šla vaše pošta. Účty, hesla, e-maily, kontakty, kalendáře i nastavení zůstávají zašifrované jen ve vašem počítači. Nesbíráme žádné údaje o vás ani o tom, jak aplikaci používáte. Žádná reklama, žádná AI, žádné sledování.</p></div>
+
+<h2>Kdo za pidgoo stojí</h2>
+<p>pidgoo je bezplatná e-mailová aplikace pro Windows a Mac od nezávislého vývojáře (vydavatel „mistak“). Kontakt: <a href="mailto:hello@pidgoo.com">hello@pidgoo.com</a>.</p>
+
+<h2>Jaké údaje pidgoo zpracovává a kde</h2>
+<p>pidgoo pracuje s údaji, které do něj sami zadáte nebo které přijdou do vašich schránek: e-mailové účty a přístupové údaje, zprávy a přílohy, kontakty, kalendáře, úkoly, podpisy a nastavení. Všechno je uložené <b>jen ve vašem počítači</b> v zašifrovaném trezoru (AES-256). Klíč k trezoru chrání systém (Windows nebo macOS), případně heslo, které si v pidgoo nastavíte. Autor pidgoo k těmto údajům nemá přístup a nikdy je nedostává.</p>
+
+<h2>S kým se pidgoo spojuje</h2>
+<p>Aplikace se připojuje jen tam, kam je to pro její funkci potřeba, a vždy přímo z vašeho počítače:</p>
+<ul>
+<li><b>Vaše poštovní, kalendářové a kontaktní servery</b> (IMAP, SMTP, JMAP, CalDAV, CardDAV, Google Kalendář) – ty, které si sami přidáte. Údaje si vyměňujete přímo s nimi.</li>
+<li><b>Přihlášení přes Google nebo Microsoft</b> – jen pokud ho při přidání účtu zvolíte. Přihlašujete se přímo u Googlu nebo Microsoftu, pidgoo vaše heslo nevidí.</li>
+<li><b>Vyhledání nastavení serveru</b> – při přidání účtu se pidgoo může podle domény vaší adresy (část za @) zeptat systému DNS a veřejné databáze nastavení autoconfig.thunderbird.net. Odesílá se jen doména, ne celá adresa ani heslo.</li>
+<li><b>Aktualizace</b> – verze stažená z pidgoo.com kontroluje nové verze na GitHubu (github.com). Verzi z Microsoft Store aktualizuje Microsoft Store. Odesílá se jen běžný požadavek na stažení souboru.</li>
+<li><b>Překlad zpráv</b> – jen pokud si ho zapnete s vlastním klíčem Google Cloud a kliknete na Přeložit. Text překládané zprávy se pak pošle službě Google Cloud Translation.</li>
+<li><b>Odhlášení z odběru</b> – když kliknete na Odhlásit, pidgoo pošle žádost o odhlášení na adresu, kterou uvedl odesílatel newsletteru.</li>
+<li><b>Obrázky z internetu v e-mailech</b> – ve výchozím stavu jsou zablokované. Pokud je u zprávy povolíte, stáhnou se ze serveru odesílatele, který tím může zjistit, že jste zprávu otevřeli.</li>
+<li><b>Odkazy</b> (například pidgoo.com nebo Ko-fi pro dobrovolnou podporu) se otevírají ve vašem prohlížeči.</li>
+</ul>
+
+<h2>Co nedělá</h2>
+<ul>
+<li>Neobsahuje žádnou analytiku, telemetrii, sledovací kódy ani reklamu.</li>
+<li>Neodesílá vaše e-maily, kontakty ani jiná data autorovi ani žádné třetí straně (kromě výše uvedených služeb, které sami používáte).</li>
+<li>Nepoužívá umělou inteligenci ani vaše data k trénování čehokoli.</li>
+</ul>
+
+<h2>Uchování a smazání</h2>
+<p>Data jsou ve vašem počítači, dokud je neodstraníte. Účet odeberete v Nastavení → Účty; odinstalováním aplikace se odstraní i její data – u verze z Microsoft Store automaticky, u verze z webu pro Windows po potvrzení. Na Macu data zůstanou ve složce ~/Library/Application Support/pidgoo, dokud ji nesmažete. Pošta na vašich serverech zůstává beze změny.</p>
+
+<h2>Web pidgoo.com</h2>
+<p>Web nepoužívá cookies ani analytiku a písma načítá z vlastní adresy. Je hostovaný na GitHub Pages; GitHub může z technických a bezpečnostních důvodů zpracovávat záznamy o přístupu (například IP adresu). Zvolený jazyk webu si pamatuje jen váš prohlížeč.</p>
+
+<h2>Děti</h2>
+<p>pidgoo není určeno přímo dětem a autor od dětí vědomě nesbírá žádné údaje – aplikace žádné údaje nesbírá od nikoho.</p>
+
+<h2>Změny</h2>
+<p>Pokud se tyto zásady změní, aktualizovanou verzi zveřejníme na této stránce s novým datem platnosti.</p>
+
+<h2>Dotazy</h2>
+<p>Napište na <a href="mailto:hello@pidgoo.com">hello@pidgoo.com</a>.</p>
+
+</div></main>
+<footer><div class="wrap"><a href="./">pidgoo.com</a> · <a href="mailto:hello@pidgoo.com">hello@pidgoo.com</a></div></footer>
+</body>
+</html>
