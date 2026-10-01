@@ -8,7 +8,7 @@
 <meta property="og:description" content="Rychlý a přehledný e-mailový klient pro Windows a Mac.">
 <meta property="og:image" content="https://pidgoo.com/img/app-light.webp">
 <title>pidgoo</title>
-<!-- pidgoo.com · web 2.0.0 · 2026-10-01 -->
+<!-- pidgoo.com · web 2.0.0 · 2026-10-01b -->
 <meta name="description" content="pidgoo – rychlý a přehledný e-mailový klient pro Windows a Mac. Data šifrovaná AES-256, žádná AI, žádné sledování.">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon-180.png">
@@ -434,9 +434,9 @@ footer a:hover { color: var(--ink); }
       var frag = document.createElement('span'), text = n.nodeValue, last = 0, m; re.lastIndex = 0;
       while ((m = re.exec(text))) {
         var start = m.index + m[1].length;
-        frag.appendChild(document.createTextNode(text.slice(last, start) + 'ma'));
+        frag.appendChild(document.createTextNode(text.slice(last, start) + 'p'));
         var w = document.createElement('span'); w.className = 'mdot'; w.textContent = '\u0131'; frag.appendChild(w);
-        frag.appendChild(document.createTextNode('loo')); last = start + 6;
+        frag.appendChild(document.createTextNode('dgoo')); last = start + 6;
       }
       frag.appendChild(document.createTextNode(text.slice(last)));
       frag.className = 'mtext';
