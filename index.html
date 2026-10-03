@@ -110,13 +110,6 @@ h1 .mdot::after, h2 .mdot::after, h3 .mdot::after { top: .29em; width: .15em; he
 .dl-main .arrow { margin-left: auto; width: 20px; height: 20px; opacity: .8; }
 .dl-alt { font-size: 14px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 14px; }
 .dl-alt a { color: var(--ink2); text-underline-offset: 3px; }
-.dl-store { display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; font: 600 15px var(--body); color: var(--ink); text-decoration: none; padding: 10px 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); transition: border-color .15s ease, transform .15s ease; }
-.dl-store:hover { border-color: var(--accent); transform: translateY(-1px); }
-.dl-store:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-.dl-store svg { width: 18px; height: 18px; color: var(--accent); }
-.dl-store small { font-weight: 400; color: var(--muted); font-size: 13px; }
-.dl-store[hidden] { display: none; }
-@media (max-width: 520px) { .dl-store small { display: none; } }
 .trust { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
 .trust > span { font-size: 12.5px; color: var(--ink2); border: 1px solid var(--line); background: var(--surface); padding: 4px 10px; border-radius: 999px; display: inline-flex; gap: 6px; align-items: center; }
 .trust svg { width: 13px; height: 13px; color: var(--accent); }
@@ -233,12 +226,11 @@ footer a:hover { color: var(--ink); }
       <p class="lead" data-i18n="hero.lead">Rychlá, přehledná a moderní e-mailová aplikace pro Windows a Mac. Bezpečnost je u nás na prvním místě – všechna data zůstávají zašifrovaná jen ve vašem počítači.</p>
     </div>
     <div class="cta">
-      <a class="dl-main" id="dl-main" href="#stahnout">
+      <a class="dl-main" id="dl-main" href="https://apps.microsoft.com/detail/9MV1XQV4WPC2" target="_blank" rel="noopener">
         <span id="dl-main-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="3.5" width="19" height="13" rx="2"/><path d="M8 20.5h8M12 16.5v4"/></svg></span>
-        <span><b id="dl-main-title">Stáhnout pro Windows</b><span id="dl-main-meta">Verze 2.1.0 · Windows 10 a 11 · 113 MB</span></span>
+        <span><b id="dl-main-title">Získat v Microsoft Store</b><span id="dl-main-meta">Windows 10 a 11 · automatické aktualizace</span></span>
         <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
       </a>
-      <a class="dl-store" id="dl-store" href="https://apps.microsoft.com/detail/9MV1XQV4WPC2" target="_blank" rel="noopener" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span id="dl-store-text">Microsoft Store</span><small id="dl-store-sub">automatické aktualizace</small></a>
       <div class="dl-alt" id="dl-alt"></div>
       <div class="trust">
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m10.7 12.3 9.8-9.8M16 7l3 3M19 4l2 2"/></svg><span data-i18n="trust.aes">Šifrování AES-256</span></span>
@@ -312,17 +304,17 @@ footer a:hover { color: var(--ink); }
     <div class="wrap">
       <div class="sec-head">
         <div><span class="eyebrow" data-i18n="dl.eyebrow">Stáhnout</span><h2 data-i18n="dl.title">Nainstalované za minutu.</h2></div>
-        <p data-i18n="dl.lead">Klasický instalátor pro Windows i Mac. pidgoo je zdarma, bez reklam a bez registrace – po spuštění jen přidáte svůj e-mail.</p>
+        <p data-i18n="dl.lead">Pro Windows z Microsoft Store, pro Mac klasický instalátor. pidgoo je zdarma, bez reklam a bez registrace – po spuštění jen přidáte svůj e-mail.</p>
       </div>
       <div class="platforms">
         <article class="plat" id="plat-win">
           <div class="plat-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="3.5" width="19" height="13" rx="2"/><path d="M8 20.5h8M12 16.5v4"/></svg><h3>Windows</h3><span class="tag" data-i18n="dl.yours" hidden>Váš systém</span></div>
-          <div class="btn-row"><a class="btn" data-file="win" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg><span data-i18n="dl.win">Stáhnout instalátor</span></a><a class="btn ghost" href="https://apps.microsoft.com/detail/9MV1XQV4WPC2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span data-i18n="dl.store">Microsoft Store</span></a></div>
-          <div class="meta" id="meta-win">pidgoo-setup.exe · 113 MB · Windows 10 / 11 (64 bit)</div>
+          <div class="btn-row"><a class="btn" href="https://apps.microsoft.com/detail/9MV1XQV4WPC2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span data-i18n="dl.store">Získat v Microsoft Store</span></a></div>
+          <div class="meta" id="meta-win">Microsoft Store · Windows 10 / 11 (64 bit)</div>
           <ol class="steps">
-            <li data-i18n="w1">Otevřete stažený soubor pidgoo-setup.exe.</li>
-            <li data-i18n="w2">Průvodce se zeptá, kam pidgoo nainstalovat – stačí nechat výchozí složku.</li>
-            <li data-i18n="w3">Po dokončení pidgoo najdete v nabídce Start (a volitelně na ploše).</li>
+            <li data-i18n="w1">Klikněte na Získat v Microsoft Store – otevře se stránka pidgoo.</li>
+            <li data-i18n="w2">V Microsoft Store klikněte na Získat (nebo Instalovat).</li>
+            <li data-i18n="w3">pidgoo najdete v nabídce Start. Nové verze vám Store nainstaluje sám.</li>
           </ol>
         </article>
         <article class="plat" id="plat-mac">
@@ -366,7 +358,7 @@ footer a:hover { color: var(--ink); }
   var FILES = { win: 'pidgoo-setup.exe', 'mac-arm': 'pidgoo-applesilicon.dmg', 'mac-intel': 'pidgoo-intel.dmg' };
   var STORE = 'https://apps.microsoft.com/detail/9MV1XQV4WPC2';
   var REPO_API = 'https://api.github.com/repos/jaroslavmistoler-pixel/pidgoo/releases/latest';
-  var VERSION = '2.1.0';
+  var VERSION = '2.2.1';
   var SIZE = { win: 113, 'mac-arm': 133, 'mac-intel': 139 }; // MB – přepíše se podle skutečného vydání
 
   var EN = {
@@ -401,9 +393,9 @@ footer a:hover { color: var(--ink); }
     'spec': '<span class="c"># pidgoo-vault.json</span>\n<span class="k">cipher</span>      AES-256-GCM\n<span class="k">key</span>         scrypt · N=2<sup>17</sup> · 128 MB <span class="c">/ attempt</span>\n<span class="k">device</span>      <span class="d">DPAPI</span> · <span class="d">macOS Keychain</span>\n<span class="k">recovery</span>    80 bits of randomness\n<span class="c"># connections</span>\n<span class="k">tls</span>         1.2+ · verified certificate\n<span class="k">plaintext</span>   <span class="d">refused</span>\n<span class="k">oauth</span>       PKCE S256 · Google, Microsoft',
     'sec.note': 'The code passed an independent security audit and penetration testing. A technical document for experts ships with every release.',
     'dl.eyebrow': 'Download', 'dl.title': 'Installed in a minute.',
-    'dl.lead': 'A classic installer for Windows and Mac. pidgoo is free, without ads or sign-up – after launch you just add your email.',
-    'dl.yours': 'Your system', 'dl.store': 'Microsoft Store', 'dl.win': 'Download installer', 'dl.macArm': 'Apple Silicon', 'dl.macIntel': 'Intel', 
-    'w1': 'Open the downloaded pidgoo-setup.exe.', 'w2': 'The wizard asks where to install pidgoo – the default folder is fine.', 'w3': 'When it finishes, pidgoo is in the Start menu (and optionally on the desktop).',
+    'dl.lead': 'Windows from the Microsoft Store, a classic installer for Mac. pidgoo is free, without ads or sign-up – after launch you just add your email.',
+    'dl.yours': 'Your system', 'dl.store': 'Get it from Microsoft Store', 'dl.macArm': 'Apple Silicon', 'dl.macIntel': 'Intel', 
+    'w1': 'Click Get it from Microsoft Store – the pidgoo page opens.', 'w2': 'In the Microsoft Store, click Get (or Install).', 'w3': 'pidgoo is in the Start menu. The Store installs new versions for you.',
     'm1': 'Open the downloaded pidgoo.dmg.', 'm2': 'In the window, drag the pidgoo icon onto the Applications folder.', 'm3': 'Launch pidgoo from Launchpad or the Applications folder.',
     'dl.whichMac': 'Not sure which Mac you have? Open the Apple menu → About This Mac and look for “Chip” (Apple M…) or “Processor” (Intel).'
   };
@@ -425,7 +417,7 @@ footer a:hover { color: var(--ink); }
   var tagWin = document.querySelector('#plat-win .tag'), tagMac = document.querySelector('#plat-mac .tag');
   (os === 'mac' ? tagMac : tagWin).hidden = false;
   document.getElementById(os === 'mac' ? 'plat-mac' : 'plat-win').classList.add('recommended');
-  var ICON_WIN = document.querySelector('#plat-win .plat-head svg').outerHTML, ICON_MAC = document.querySelector('#plat-mac .plat-head svg').outerHTML;
+  var ICON_STORE = document.querySelector('#plat-win .btn svg').outerHTML, ICON_WIN = document.querySelector('#plat-win .plat-head svg').outerHTML, ICON_MAC = document.querySelector('#plat-mac .plat-head svg').outerHTML;
 
   var lang = 'cs';
   function render() {
@@ -437,21 +429,19 @@ footer a:hover { color: var(--ink); }
     document.querySelectorAll('[data-i18n-aria]').forEach(function (el) { var v = d[el.dataset.i18nAria]; if (v != null) { el.setAttribute('aria-label', v); el.title = v; } });
     var u = UI[lang];
     var main = document.getElementById('dl-main');
-    main.href = url(os === 'mac' ? 'mac-arm' : 'win');
-    document.getElementById('dl-main-icon').innerHTML = os === 'mac' ? ICON_MAC : ICON_WIN;
-    document.getElementById('dl-main-title').textContent = os === 'mac' ? u.mac : u.win;
-    document.getElementById('dl-main-meta').textContent = u.ver + VERSION + ' · ' + (os === 'mac' ? 'Apple Silicon · ' + SIZE['mac-arm'] : u.winSys + ' · ' + SIZE.win) + ' MB';
-    document.getElementById('meta-win').textContent = FILES.win + ' · ' + SIZE.win + ' MB · Windows 10 / 11 (64 bit)';
+    main.href = os === 'mac' ? url('mac-arm') : STORE;
+    if (os === 'mac') { main.removeAttribute('target'); main.removeAttribute('rel'); } else { main.target = '_blank'; main.rel = 'noopener'; }
+    document.getElementById('dl-main-icon').innerHTML = os === 'mac' ? ICON_MAC : ICON_STORE;
+    document.getElementById('dl-main-title').textContent = os === 'mac' ? u.mac : u.store;
+    document.getElementById('dl-main-meta').textContent = os === 'mac' ? u.ver + VERSION + ' · Apple Silicon · ' + SIZE['mac-arm'] + ' MB' : u.winSys + ' · ' + u.storeSub;
+    var arrow = main.querySelector('.arrow');
+    if (arrow) arrow.innerHTML = os === 'mac' ? '<path d="M12 5v14M5 12l7 7 7-7"/>' : '<path d="M7 17 17 7M8 7h9v9"/>';
     document.getElementById('meta-mac').textContent = 'pidgoo.dmg · ' + SIZE['mac-arm'] + ' MB · M1–M4 / Intel · macOS 13+';
-    var st = document.getElementById('dl-store');
-    st.hidden = os === 'mac';
-    document.getElementById('dl-store-text').textContent = u.store;
-    document.getElementById('dl-store-sub').textContent = u.storeSub;
     var alt = document.getElementById('dl-alt');
     alt.innerHTML = '';
     var add = function (text, href) { var a = document.createElement('a'); a.href = href; a.textContent = text; alt.appendChild(a); };
     var s = document.createElement('span'); s.textContent = u.other; alt.appendChild(s);
-    if (os === 'mac') { add(u.intel, url('mac-intel')); add(u.winLink, url('win')); add(u.storeLink, STORE); }
+    if (os === 'mac') { add(u.intel, url('mac-intel')); add(u.storeLink, STORE); }
     else { add(u.macLink + ' (Apple Silicon)', url('mac-arm')); add(u.intel, url('mac-intel')); }
     document.querySelectorAll('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
     var pl = document.getElementById('privacy-link'); if (pl) pl.href = lang === 'en' ? 'privacy.html' : 'soukromi.html';
